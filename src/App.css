@@ -1,0 +1,277 @@
+/* 터미널 기본 스타일은 그대로 유지 */
+.terminal {
+  width: 800px;
+  height: 600px;
+  max-width: 90vw;
+  max-height: 90vh;
+  background-color: #000;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  border: 2px solid #33ff33;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+}
+
+.terminal-content {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 50px 20px 60px 20px;
+}
+
+/* 애니메이션 클래스들 (wipe, fade 등) 은 그대로 유지 */
+
+/* 긴 페이드아웃 애니메이션 (대화창용) */
+@keyframes longFadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+.long-fade-out {
+  animation: longFadeOut 10s forwards;
+}
+
+/* 엔딩 크레딧 화면 스타일 */
+.credits-terminal {
+  width: 800px;
+  height: 600px;
+  max-width: 90vw;
+  max-height: 90vh;
+  background-color: #000;
+  box-sizing: border-box;
+  position: relative;
+  border: 2px solid #33ff33;
+  border-radius: 8px;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* 엔딩 크레딧 내용: 절대 위치로 배치하여 중앙 정렬 영향 제거 */
+.credits-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+  text-align: center;
+  color: #33ff33;
+  animation: scrollCredits 20s linear forwards;
+}
+
+@keyframes scrollCredits {
+  0% {
+    transform: translateY(110%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+/* 엔딩 크레딧 페이드아웃 (5초) */
+@keyframes creditsFadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+.credits-fade-out {
+  animation: creditsFadeOut 5s forwards;
+}
+
+/* 채팅 버블 기본 스타일 */
+.chat-bubble {
+  max-width: 60%;
+  margin: 15px 0 10px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: #111;
+  box-shadow: 0 0 5px #33ff33;
+  color: #33ff33;
+  line-height: 1.4;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.chat-bubble.right {
+  margin-left: auto;
+  border-top-right-radius: 0;
+}
+
+/* final-chat (최종 채팅 메시지) 추가 여백 */
+.final-chat {
+  margin-top: 30px;
+  margin-right: 15px;
+}
+
+/* 채팅 헤더 */
+.chat-header {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* 시스템 메시지 스타일 */
+.system-message pre {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  margin: 0;
+  font-style: italic;
+  color: #999;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* 나레이션 스타일 (완전 중앙 정렬) */
+.narration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.narration pre {
+  margin: 0;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #33ff33;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* 클릭 힌트 */
+.click-hint {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* 뒤로가기 버튼 스타일 */
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  background-color: #000; /* 터미널 배경색과 동일하게 설정 */
+  border: 1px solid #33ff33;
+  color: #33ff33;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  user-select: none;
+  z-index: 10;
+}
+
+.back-button:hover {
+  background-color: #33ff33;
+  color: #000;
+}
+
+@media (max-width: 600px) {
+  body {
+    /* 모바일에서는 컨텐츠를 상단에 정렬하여 위쪽 여백(빈 공간)을 제거 */
+    align-items: flex-start;
+  }
+  .terminal {
+    height: 80vh;
+    max-height: 80vh;
+    margin-top: 25px;
+  }
+}
+
+/* 최종 채팅 메시지에 붙일 커서 깜빡임 효과 */
+.blinking-cursor {
+  display: inline-block;
+  width: 10px;       /* 원하는 너비 (기존보다 넓게) */
+  height: 1em;       /* 텍스트 높이에 맞춤 */
+  background-color: #33ff33; /* 터미널 녹색 */
+  margin-left: 2px;
+  animation: blink 1s step-start infinite;
+  transform: translateY(3px); /* 커서의 세로 위치를 약간 아래로 이동 */
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* 화면 전환 효과: 앞으로 진행 (아래에서 위로) */
+@keyframes wipeOut {
+  0% { transform: translateY(0%); opacity: 1; }
+  100% { transform: translateY(-100%); opacity: 0; }
+}
+
+@keyframes wipeIn {
+  0% { transform: translateY(100%); opacity: 0; }
+  100% { transform: translateY(0%); opacity: 1; }
+}
+
+.terminal-content.wipe-out {
+  animation: wipeOut 0.5s forwards;
+}
+
+.terminal-content.wipe-in {
+  animation: wipeIn 0.5s forwards;
+}
+
+/* 화면 전환 효과: 뒤로 진행 (위에서 아래로) */
+@keyframes wipeOutBack {
+  0% { transform: translateY(0%); opacity: 1; }
+  100% { transform: translateY(100%); opacity: 0; }
+}
+
+@keyframes wipeInBack {
+  0% { transform: translateY(-100%); opacity: 0; }
+  100% { transform: translateY(0%); opacity: 1; }
+}
+
+.terminal-content.wipe-out-back {
+  animation: wipeOutBack 0.5s forwards;
+}
+
+.terminal-content.wipe-in-back {
+  animation: wipeInBack 0.5s forwards;
+}
+
+/* 대화창 긴 페이드아웃 효과 (10초) */
+@keyframes longFadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+.long-fade-out {
+  animation: longFadeOut 10s forwards;
+}
+
+/* 엔딩 크레딧 페이드아웃 효과 (5초) */
+@keyframes creditsFadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+.credits-fade-out {
+  animation: creditsFadeOut 5s forwards;
+}
+
+.news-message {
+  margin-bottom: 20px;
+}
+
+.news-message pre {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #33ff33;
+}
+
