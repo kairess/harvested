@@ -4,7 +4,7 @@
 
 [플레이하기](https://kairess.github.io/harvested)
 
-![Harvested](result.png)
+<img src="result.png" alt="Harvested" width="300">
 
 ## 🌟 주요 기능
 
