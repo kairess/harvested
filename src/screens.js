@@ -31,11 +31,11 @@ export const rawScreens = [
   },
   {
     type: 'narration',
-    text: `민수는 모르는 사람이 보낸 파일이 의심스러웠지만 찜찜한 마음을 떨쳐내지 못했다.`
+    text: `민수는 낯선 이가 보낸 파일에 의심을 품었지만, 마음속 깊은 불안감을 떨쳐내지 못했다.`
   },
   {
     type: 'narration',
-    text: `그도 모르게 손이 가서 어쩔 수 없이 열어볼 수 밖에 없었다.`
+    text: `이미 작성된 알고리즘처럼, 그의 손은 무의식 중에 파일로 향했고 결국 어쩔 수 없이 열어보게 되었다.`
   },
   {
     type: 'narration',
@@ -44,15 +44,15 @@ export const rawScreens = [
   },
   {
     type: 'narration',
-    text: `민수는 충격적인 사실에 몸이 떨렸다.`
+    text: `민수는 충격적인 사실을 접한 순간, 온몸이 떨리기 시작했다.`
   },
   {
     type: 'narration',
-    text: `이전에 이와 관련해서 들은 적이 있었다.`
+    text: `이와 관련된 기억이 테이프에서 재생되듯이 떠올랐다.`
   },
   {
     type: 'narration',
-    text: `그는 기자로서 이 소식을 알리는 것이 중요하다고 생각했다.`
+    text: `기자로서 그는 이 소식을 세상에 알리는 것이 무엇보다 중요하다고 생각했다.`
   },
   {
     type: 'composite',
@@ -158,15 +158,15 @@ export const rawScreens = [
   },
   {
     type: 'narration',
-    text: `편집장 없이는 기사를 낼 수 없다.`
+    text: `편집장이 없다면 기사를 내보낼 수 없었다.`
   },
   {
     type: 'narration',
-    text: `게다가 정보의 출처도 확실하지 않다.`
+    text: `더구나, 정보의 출처도 확실치 않았다.`
   },
   {
     type: 'narration',
-    text: `민수는 누군가가 보낸 파일에 나와있는 검은별이라는 자를 찾아야만 했다.`
+    text: `민수는 누군가가 보낸 파일에 언급된 '검은별'이라는 인물을 반드시 찾아내야 했다.`
   },
   {
     type: 'composite',
@@ -287,11 +287,11 @@ export const rawScreens = [
   },
   {
     type: 'narration',
-    text: `그의 어이없는 제안에 민수는 잠시 얼어붙었다.`
+    text: `그의 터무니없는 제안에 민수는 순간 말을 잃고 얼어붙었다.`
   },
   {
     type: 'narration',
-    text: `하지만 민수의 직감은 그가 검은별이라고 확신했다.`
+    text: `하지만 민수의 직감은 그가 바로 '검은별'임을 확신시켰다.`
   },
   {
     type: 'composite',
@@ -374,7 +374,7 @@ export const rawScreens = [
   },
   {
     type: 'narration',
-    text: `민수는 왠지 모르게 검은별이 신뢰가 갔다.`
+    text: `왠지 모르게 민수는 검은별을 믿게 되었다.`
   },
   {
     type: 'composite',
